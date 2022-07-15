@@ -1,0 +1,23 @@
+<h1>Welcome to Angular</h1> {{title}}
+<br>
+<br>
+<!-- <second-comp></second-comp> -->
+<!-- <app-test-bindings></app-test-bindings> -->
+<!-- <app-test-predefined-pipes></app-test-predefined-pipes> -->
+<!-- <app-test-employee-table></app-test-employee-table> -->
+<!-- <app-parent></app-parent> -->
+<!-- <app-users-list></app-users-list> -->
+<!-- <app-template-form></app-template-form> -->
+<!-- <app-model-form></app-model-form> -->
+<nav style="margin-left:10vh;">
+    <a [routerLink]="['home']" routerLinkActive='active'>Home</a>
+    <a [routerLink]="['pipes']" routerLinkActive='active'>Predefined Pipes</a>
+    <a [routerLink]="['parentchild']" routerLinkActive='active'>Parent-Child component</a>
+    <a [routerLink]="['employees']" routerLinkActive='active'>Employees List component</a>
+    <a [routerLink]="['users']" routerLinkActive='active'>User list using Http Client</a>
+    <a [routerLink]="['admin']" routerLinkActive='active'>Admin Controls</a>
+</nav>
+<hr>
+<div class="container">
+<router-outlet></router-outlet>
+</div>

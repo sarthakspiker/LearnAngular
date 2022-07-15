@@ -1,0 +1,21 @@
+<p>test-predefined-pipes works!</p>
+<p><b>Check Files for source:</b>
+    <br> \app\test-predefined-pipes\test-predefined-pipes.component.ts
+    <br> \app\test-predefined-pipes\test-predefined-pipes.component.html
+</p>
+<pre>
+    {{companyName}} - This is actual string
+    {{companyName | titlecase}} - String with titlecase pipe
+    {{companyName | lowercase}} - String with lowercase pipe
+    {{companyName | uppercase}} - String with uppercase pipe
+    {{companyName | slice:3:5}} - String with slice:3:5 pipe
+    {{companyName | slice:3}} - String with slice:3 pipe
+    {{productPrice | currency}}
+    {{productPrice | currency:'EUR'}}
+    {{productExpDate}}
+    {{productExpDate | date:'shortDate'}}
+    {{productExpDate | date:'dd/MM/yyy hh:mm:ss'}}
+    
+    {{customer | json}}
+</pre>
+

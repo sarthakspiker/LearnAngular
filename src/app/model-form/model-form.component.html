@@ -1,0 +1,26 @@
+<p>Model Driven Form</p>
+<div class="container">
+    <h2>Registration Form</h2><hr>
+    <form [formGroup]='userForm' (ngSubmit)='sendData()'>
+      <div class='form-group'>
+        <label>Name</label>
+        <input 
+        [class.invalid]="(userForm.get('userName')?.invalid && userForm.get('userName')?.touched)"
+        type='text' 
+        formControlName='userName' 
+        class='form-control'>
+      </div>
+
+      <div *ngIf="userForm.get('userName')?.invalid && userForm.get('userName')?.touched">
+         <div *ngIf="userForm.get('userName')?.errors?.required" class='alert alert-danger'>
+             UserName is required
+         </div>
+         <div *ngIf="userForm.get('userName')?.errors?.pattern" class='alert alert-danger'>
+            UserName is invalid
+         </div>
+      </div>
+
+      <button class='btn btn-success' [disabled]='!userForm.valid' type='submit'>Submit</button>
+
+    </form>
+</div>

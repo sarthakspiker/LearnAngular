@@ -1,0 +1,22 @@
+<p><b>Check Files for source:</b>
+    <br> src\app\test-employee-table-json\test-employee-table-json.component.ts
+    <br> src\app\test-employee-table-json\test-employee-table-json.component.html
+</p>
+
+<h3>Employee List using service</h3>
+<h4>Data recieved from EmployeesData.json using parseEmployeesJson Service:</h4>
+
+<div>
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr><th>EmpID</th><th>Name</th><th>Salary</th></tr>
+    </thead>
+    <tbody>
+    <tr *ngFor='let emp of employeesJson'>
+        <td>{{emp.empId}}</td>
+        <td>{{emp.empName}}</td>
+        <td>{{emp.salary}}</td>
+    </tr>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,18 @@
+<h2>test-bindings works!</h2><br>
+<pre>
+   <h4 appTestDirective>Welcome to {{CompanyName}}!  - This string is static</h4>
+   {{welcomeToCompany()}} - This string is dynamic
+
+   logo: <img [src] = 'company.logo' height='40px'>
+   URL : <a [href]='company.url' [textContent]='company.name'></a>
+
+   FirstNum: <input type='number' #fno>
+
+   SecondNum: <input type='number' #sno>
+
+   <button (click)='addOperation(fno.value, sno.value)'>Add values</button>
+   
+    <!-- Calculating: {{fno}} + {{sno}} -->
+
+   <div *ngIf='outcome != 0' appTestDirective>Outcome: {{outcome}}</div>
+</pre>

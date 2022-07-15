@@ -1,0 +1,23 @@
+<p><b>Check Files for source:</b>
+    <br> src\app\test-employee-table\test-employee-table.component.ts
+    <br> src\app\test-employee-table\test-employee-table.component.html
+</p>
+
+<h3>Employee List using service</h3>
+<h4>Data recieved as js object from service:</h4>
+
+<div>
+<table class="table table-striped table-bordered">
+    <thead>
+    <tr><th>EmpID</th><th>Name</th><th>Salary</th></tr>
+    </thead>
+    <tbody>
+    <tr *ngFor='let employee of employees'>
+        <td>{{employee.empId}}</td>
+        <td>{{employee.empName}}</td>
+        <td>{{employee.salary}}</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+<!-- <app-test-employee-table-json></app-test-employee-table-json> -->

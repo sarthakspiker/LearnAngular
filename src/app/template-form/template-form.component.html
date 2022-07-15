@@ -1,0 +1,32 @@
+<p>Template Driven Form</p>
+<div class="container">
+    <h2>Registraion Form</h2>
+    <form #userForm='ngForm' (ngSubmit)='submitData(userForm.value)'>
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" #nameRef='ngModel' class="form-control" name="name" 
+            ngModel required minlength='5' maxlength='12' pattern='[a-z]+'>
+        </div>
+        
+        <div *ngIf='nameRef.errors && (nameRef.dirty || nameRef.touched )' class='alert alert-danger'>
+            <div [hidden]='!nameRef.errors.required'>
+             Please enter name
+            </div>
+            <div [hidden]='!nameRef.errors.minlength'>
+             Please enter min 5 characters
+            </div>
+            <div [hidden]='!nameRef.errors.pattern'>
+             Please enter valid name
+            </div>
+         </div>
+       
+         <div ngModelGroup='Adress'>
+         <div class='form-group'>
+             <label>city</label>
+             <input #cityRef='ngModel' type='text' class='form-control' name='city' ngModel>
+         </div>
+         <br>
+         <div class="form-group"><button ngSubmit class="btn btn-success" [disabled]='!userForm.valid' type="submit">Submit</button></div>
+
+</div>

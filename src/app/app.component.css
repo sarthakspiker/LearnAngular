@@ -1,0 +1,11 @@
+a.active {
+    background-color:rgb(65, 65, 219);
+    color: white;
+}
+a{
+    padding: 1vh;
+    background-color:whitesmoke;
+    color: blue;
+    border: 1px solid cornflowerblue;
+    text-decoration: none;
+}

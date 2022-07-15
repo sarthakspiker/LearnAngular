@@ -1,0 +1,11 @@
+<p><b>Check Files for source:</b>
+    <br> src\app\parent\parent.component.ts
+    <br> src\app\parent\parent.component.html
+    <br> src\app\child\child.component.ts
+    <br> src\app\child\child.component.html
+</p>
+
+<div style="background-color: #9c9c9c;">
+    <h2>Parent Component : {{pAmount}}</h2>
+    <app-child [cAmount]='pAmount' (change)='amoutChange($event)'></app-child>
+</div>
